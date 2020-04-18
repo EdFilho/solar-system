@@ -20,6 +20,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_launcher_icons:
+  gradient_bottom_navigation_bar: ^1.0.0+4
+
 
 flutter_icons:
   image_path: "assets/icon/icon.png"

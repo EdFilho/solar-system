@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solar_system/componentes/gradient_app_bar.dart';
-import 'package:solar_system/home/resume_card.dart';
+import 'package:solar_system/home/summary_card.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       body: new Column(
         children: <Widget>[
           GradientAppBar('Solar System'),
-          ResumeCard(),
+          SummaryCard(),
         ],
       ),
     );

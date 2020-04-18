@@ -6,19 +6,19 @@ const accentColor = const Color(0xFF736AB7);
 
 final titleTextStyle = TextStyle(
   color: Colors.white,
-  fontSize: 18.0,
+  fontSize: 22.0,
   fontWeight: FontWeight.w300,
 );
 
 final subTitleTextStyle = TextStyle(
   color: const Color(0xffb6b2df),
-  fontSize: 12.0,
+  fontSize: 18.0,
   fontWeight: FontWeight.w200,
 );
 
 final regularTextStyle = TextStyle(
   color: const Color(0xffb6b2df),
-  fontSize: 9.0,
+  fontSize: 12.0,
   fontWeight: FontWeight.w400
 );
 

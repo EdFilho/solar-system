@@ -16,6 +16,12 @@ final subTitleTextStyle = TextStyle(
   fontWeight: FontWeight.w200,
 );
 
+final subTitleTextStyle1 = TextStyle(
+  color: Colors.white,
+  fontSize: 18.0,
+  fontWeight: FontWeight.w200,
+);
+
 final regularTextStyle = TextStyle(
   color: const Color(0xffb6b2df),
   fontSize: 12.0,

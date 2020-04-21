@@ -34,7 +34,8 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           GradientAppBar('Sistema Solar'),
           SummaryCard(),
-          SubTitle('Planetas')
+          SubTitle('Planetas'),
+          SubTitle('Cometas'),
         ],
       ),
       bottomNavigationBar: GradientBottomNavigationBar(

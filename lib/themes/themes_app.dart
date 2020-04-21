@@ -28,6 +28,10 @@ final regularTextStyle = TextStyle(
   fontWeight: FontWeight.w400
 );
 
+final smallTextStyle = TextStyle(
+  color: const Color(0xffb6b2df),
+  fontSize: 9.0,
+);
 
 ThemeData appTheme() {
   return ThemeData(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HorizontalListViewer extends StatelessWidget {
+class HorizontalListPlanets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Expanded(

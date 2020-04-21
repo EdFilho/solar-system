@@ -9,8 +9,8 @@ class SummaryCard extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final summaryThumbnail = new Container(
-      margin: EdgeInsets.symmetric(
-        vertical: 0,
+      margin: EdgeInsets.only(
+        top: 0,
       ),
       alignment: FractionalOffset.center,
       child: new Image(
@@ -58,7 +58,7 @@ class SummaryCard extends StatelessWidget {
     
     final summaryCard = new Container(
       child: summaryCardContent,
-      height: 400.0,
+      height: 150.0,
       margin: new EdgeInsets.only(top: 46.0),
       decoration: new BoxDecoration(
         color: new Color(0xFF333366),

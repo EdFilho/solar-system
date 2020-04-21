@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:gradient_bottom_navigation_bar/gradient_bottom_navigation_bar.dart';
 import 'package:solar_system/componentes/gradient_app_bar.dart';
 import 'package:solar_system/componentes/subtitle.dart';
+import 'package:solar_system/home/planets/horizontal_list_planets.dart';
 import 'package:solar_system/home/summary_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,10 +33,10 @@ class _HomePageState extends State<HomePage> {
     return new Scaffold(
       body: new Column(
         children: <Widget>[
-          GradientAppBar('Sistema Solar'),
-          SummaryCard(),
-          SubTitle('Planetas'),
-          SubTitle('Cometas'),
+          new GradientAppBar('Sistema Solar'),
+          // new SummaryCard(),
+          // new SubTitle('Planetas'),
+          new HorizontalListPlanets()
         ],
       ),
       bottomNavigationBar: GradientBottomNavigationBar(

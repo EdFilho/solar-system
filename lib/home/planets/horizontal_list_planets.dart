@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solar_system/home/planets/planet_summary.dart';
+import 'package:solar_system/models/planets.dart';
 
 class HorizontalListPlanets extends StatelessWidget {
   @override
@@ -10,10 +12,13 @@ class HorizontalListPlanets extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           slivers: <Widget>[
             new SliverPadding(
-              padding: const EdgeInsets.symmetric(vertical: 48.0),
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
               sliver: new SliverFixedExtentList(
-                itemExtent: 152.0,
-                delegate: new SliverChildBuilderDelegate(null),
+                itemExtent: 300.0,
+                delegate: new SliverChildBuilderDelegate(
+                  (context, index) => new PlanetSummary(planets[index]),
+                  childCount: planets.length,
+                ),
               ),
             )
           ],

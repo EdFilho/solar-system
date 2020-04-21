@@ -14,7 +14,7 @@ class PlanetSummary extends StatelessWidget {
 
     final planetThumbnail = new Container(
       margin: new EdgeInsets.symmetric(
-        vertical: 16
+        vertical: 0,
       ),
       alignment: FractionalOffset.center,
       child: new Hero(
@@ -66,7 +66,14 @@ class PlanetSummary extends StatelessWidget {
                   value: planet.distance,
                   image: 'assets/img/ic_distance.png'
                 ),
-              )
+              ),
+              new Container(width: 8.0),
+              new Expanded(
+                child: _planetValue(
+                  value: planet.gravity,
+                  image: 'assets/img/ic_gravity.png',
+                ),
+              ),
             ],
           ),
         ],
@@ -74,7 +81,8 @@ class PlanetSummary extends StatelessWidget {
     );
   
     final planetCard = new Container(
-      height: 100,
+      child: planetCardContet,
+      height: 200,
       margin: new EdgeInsets.only(top: 46.0),
       decoration: new BoxDecoration(
         color: new Color(0xFF333366),
@@ -97,8 +105,8 @@ class PlanetSummary extends StatelessWidget {
       ),
       child: new Stack(
         children: <Widget>[
-          planetThumbnail,
           planetCard,
+          planetThumbnail,
         ],
       ),
     );

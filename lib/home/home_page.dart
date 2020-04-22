@@ -31,13 +31,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: new Column(
-        children: <Widget>[
-          new GradientAppBar('Sistema Solar'),
-          // new SummaryCard(),
-          // new SubTitle('Planetas'),
-          new HorizontalListPlanets()
-        ],
+      body: new SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            new GradientAppBar('Sistema Solar'),
+            new SummaryCard(),
+            new SubTitle('Planetas'),
+            new HorizontalListPlanets(),
+            new SummaryCard(),
+          ],
+        ),
       ),
       bottomNavigationBar: GradientBottomNavigationBar(
         backgroundColorStart: Color(0xFF333366),

@@ -5,8 +5,9 @@ import 'package:solar_system/models/planets.dart';
 class HorizontalListPlanets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Expanded(
-      child: new Container(
+    return new Container(
+        height: 300,
+        width: 400,
         color: new Color(0xFF736AB7),
         child: new CustomScrollView(
           scrollDirection: Axis.horizontal,
@@ -23,7 +24,7 @@ class HorizontalListPlanets extends StatelessWidget {
             )
           ],
         ),
-      ),
+      
     );
   }
 }

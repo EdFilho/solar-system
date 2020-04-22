@@ -24,7 +24,7 @@ class SummaryCard extends StatelessWidget {
       margin: new EdgeInsets.fromLTRB(16.0, 56.0, 16.0, 8.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           new Container(height: 4.0,),
           new Text(
@@ -32,7 +32,7 @@ class SummaryCard extends StatelessWidget {
             style: titleTextStyle,
             textAlign: TextAlign.center,
           ),
-          new Container(height: 8.0),
+          new Container(height: 4.0),
           new Text(
             summary[2],
             style: subTitleTextStyle,

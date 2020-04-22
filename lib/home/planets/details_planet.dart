@@ -40,7 +40,6 @@ class DetailsPlanet extends StatelessWidget {
   }
 
   Widget _getContent() {
-    final _overviewTitle = 'Detalhes'.toUpperCase();
     return new ListView(
       padding: new EdgeInsets.fromLTRB(0.0, 72.0, 0.0, 32.0),
       children: <Widget>[
@@ -51,10 +50,64 @@ class DetailsPlanet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new Text(
-                _overviewTitle,
+                'Caracteristicas',
                 style: titleTextStyle,
               ),
+              new Container(height: 4.0),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Órbita:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.orbit,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Gravidade:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.gravity,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Distância do Sol:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.distance,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Satélites Naturais:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.naturalSatellites,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
               new Separator(),
+              new Text(
+                'Descrição',
+                style: titleTextStyle,
+              ),
+              new Container(height: 4.0),
               new Text(
                 planet.description,
                 style: commonTextStyle,

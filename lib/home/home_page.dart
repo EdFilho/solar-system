@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gradient_bottom_navigation_bar/gradient_bottom_navigation_bar.dart';
 import 'package:solar_system/componentes/gradient_app_bar.dart';
-import 'package:solar_system/componentes/subtitle.dart';
-import 'package:solar_system/home/dwarf_planets/horizontal_list_dwarf_planets.dart';
-import 'package:solar_system/home/planets/horizontal_list_planets.dart';
-import 'package:solar_system/home/summary_card.dart';
 import 'package:solar_system/home/widgets/home_widget.dart';
 
 class HomePage extends StatefulWidget {

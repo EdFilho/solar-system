@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solar_system/componentes/separator.dart';
+import 'package:solar_system/home/dwarf_planets/details_dwarf_planet.dart';
 import 'package:solar_system/models/dwarf_planets.dart';
 import 'package:solar_system/themes/themes_app.dart';
 
@@ -54,7 +55,7 @@ class DwarfPlanetSummary extends StatelessWidget {
           ),
           new Container(height: 4.0),
           new Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Icon(
                 Icons.location_on,
@@ -109,16 +110,25 @@ class DwarfPlanetSummary extends StatelessWidget {
       ),
     );
 
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 18.0,
-        horizontal: 12.0,
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        new PageRouteBuilder(
+          pageBuilder: (_,__,___) => new DetailsDwarfPlanet(dwarfPlanet),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+            new FadeTransition(opacity: animation, child:child),
+        ),
       ),
-      child: new Stack(
-        children: <Widget>[
-          dwarfPLanetCard,
-          dwarfPlanetThumbnail
-        ],
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          vertical: 18.0,
+          horizontal: 12.0,
+        ),
+        child: new Stack(
+          children: <Widget>[
+            dwarfPLanetCard,
+            dwarfPlanetThumbnail
+          ],
+        ),
       ),
     );
   }

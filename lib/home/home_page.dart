@@ -31,11 +31,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: AppBar(
+        flexibleSpace: new GradientAppBar('Sistema Solar'),
+      ),
       body: new SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            new GradientAppBar('Sistema Solar'),
             new SummaryCard(),
             new SubTitle('Planetas'),
             new HorizontalListPlanets(),

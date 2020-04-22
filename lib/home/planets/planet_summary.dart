@@ -13,12 +13,12 @@ class PlanetSummary extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final planetThumbnail = new Container(
-      margin: new EdgeInsets.symmetric(
-        vertical: 0,
+      margin: new EdgeInsets.only(
+        bottom: 150.0,
       ),
       alignment: FractionalOffset.center,
       child: new Hero(
-        tag: 'object-hero-${planet.id}',
+        tag: 'planet-hero-${planet.id}',
         child: new Image(
           image: new AssetImage(planet.image),
           height: 92.0,

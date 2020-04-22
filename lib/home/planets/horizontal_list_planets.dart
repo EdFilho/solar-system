@@ -6,7 +6,7 @@ class HorizontalListPlanets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 300,
+        height: 280,
         width: 400,
         color: new Color(0xFF736AB7),
         child: new CustomScrollView(

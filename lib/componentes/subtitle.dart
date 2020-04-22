@@ -10,9 +10,6 @@ class SubTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      padding: new EdgeInsets.symmetric(
-        vertical: 8.0,
-      ),
       child: Column(
         children: <Widget>[
           new Text(

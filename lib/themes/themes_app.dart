@@ -30,7 +30,7 @@ final regularTextStyle = TextStyle(
 
 final smallTextStyle = TextStyle(
   color: const Color(0xffb6b2df),
-  fontSize: 9.0,
+  fontSize: 12.0,
 );
 
 ThemeData appTheme() {

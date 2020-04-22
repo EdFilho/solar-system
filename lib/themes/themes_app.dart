@@ -12,7 +12,7 @@ final titleTextStyle = TextStyle(
 
 final subTitleTextStyle = TextStyle(
   color: const Color(0xffb6b2df),
-  fontSize: 18.0,
+  fontSize: 16.0,
   fontWeight: FontWeight.w200,
 );
 

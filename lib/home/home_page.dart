@@ -3,8 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:gradient_bottom_navigation_bar/gradient_bottom_navigation_bar.dart';
 import 'package:solar_system/componentes/gradient_app_bar.dart';
 import 'package:solar_system/componentes/subtitle.dart';
+import 'package:solar_system/home/dwarf_planets/horizontal_list_dwarf_planets.dart';
 import 'package:solar_system/home/planets/horizontal_list_planets.dart';
 import 'package:solar_system/home/summary_card.dart';
+import 'package:solar_system/home/widgets/home_widget.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -28,22 +30,24 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  final List<Widget> widgets = [
+    // GalleryWidget(
+    //   key: PageStorageKey("Widget 1")
+    // ),
+    HomeWidget(
+      key: PageStorageKey('Widget Home'),
+    ),
+    Text('Gallery'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
         flexibleSpace: new GradientAppBar('Sistema Solar'),
       ),
-      body: new SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            new SummaryCard(),
-            new SubTitle('Planetas'),
-            new HorizontalListPlanets(),
-            new SummaryCard(),
-          ],
-        ),
+      body: new Center(
+        child: widgets.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: GradientBottomNavigationBar(
         backgroundColorStart: Color(0xFF333366),

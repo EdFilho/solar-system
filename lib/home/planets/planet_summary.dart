@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solar_system/componentes/separator.dart';
+import 'package:solar_system/home/planets/details_planet.dart';
 import 'package:solar_system/models/planets.dart';
 import 'package:solar_system/themes/themes_app.dart';
 
@@ -30,7 +31,7 @@ class PlanetSummary extends StatelessWidget {
     Widget _planetValue ({String value, String image}) {
       return new Container(
         child: new Row(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Image.asset(image, height: 12.0),
             new Container(width: 8.0),
@@ -44,8 +45,9 @@ class PlanetSummary extends StatelessWidget {
       margin: new EdgeInsets.fromLTRB(16.0, 38.0, 16.0, 8.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          new Container(height: 10.0),
           new Text(
             planet.name,
             style: titleTextStyle,
@@ -58,7 +60,6 @@ class PlanetSummary extends StatelessWidget {
           ),
           Separator(),
           new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Expanded(
                 child: _planetValue(
@@ -66,7 +67,6 @@ class PlanetSummary extends StatelessWidget {
                   image: 'assets/img/ic_distance.png'
                 ),
               ),
-              new Container(width: 8.0),
               new Expanded(
                 child: _planetValue(
                   value: planet.gravity,
@@ -97,16 +97,25 @@ class PlanetSummary extends StatelessWidget {
       ),
     );
 
-    return new Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 18.0,
-        horizontal: 12.0,
+    return new GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        new PageRouteBuilder(
+          pageBuilder: (_,__,___) => new DetailsPlanet(planet),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+            new FadeTransition(opacity: animation, child:child),
+        ),
       ),
-      child: new Stack(
-        children: <Widget>[
-          planetCard,
-          planetThumbnail,
-        ],
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          vertical: 18.0,
+          horizontal: 12.0,
+        ),
+        child: new Stack(
+          children: <Widget>[
+            planetCard,
+            planetThumbnail,
+          ],
+        ),
       ),
     );
   }

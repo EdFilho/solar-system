@@ -28,6 +28,12 @@ final regularTextStyle = TextStyle(
   fontWeight: FontWeight.w400
 );
 
+final commonTextStyle = TextStyle(
+  color: const Color(0xffb6b2df),
+  fontSize: 14.0,
+  fontWeight: FontWeight.w400
+);
+
 final smallTextStyle = TextStyle(
   color: const Color(0xffb6b2df),
   fontSize: 12.0,

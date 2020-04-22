@@ -31,13 +31,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> widgets = [
-    // GalleryWidget(
-    //   key: PageStorageKey("Widget 1")
-    // ),
     HomeWidget(
       key: PageStorageKey('Widget Home'),
     ),
     Text('Gallery'),
+     // GalleryWidget(
+    //   key: PageStorageKey("Widget 1")
+    // ),
   ];
 
   @override

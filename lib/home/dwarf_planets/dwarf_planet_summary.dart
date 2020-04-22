@@ -30,7 +30,7 @@ class DwarfPlanetSummary extends StatelessWidget {
     Widget _dwarfPlanetValue ({String value, String image}) {
       return new Container(
         child: new Row(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Image.asset(image, height: 12.0),
             new Container(width: 8.0),
@@ -44,8 +44,9 @@ class DwarfPlanetSummary extends StatelessWidget {
       margin: new EdgeInsets.fromLTRB(16.0, 38.0, 16.0, 8.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          new Container(height: 10.0),
           new Text(
             dwarfPlanet.name,
             style: titleTextStyle,

@@ -5,12 +5,15 @@ class Planet {
   final String distance;
   final String orbit;
   final String gravity;
+  final String temperature;
+  final String surface;
+  final String volume;
   final String naturalSatellites;
   final String description;
   final String image;
   final String picture;
 
-  const Planet ({this.id, this.name, this.nickname, this.distance, this.orbit, this.gravity, this.naturalSatellites, this.description, this.image, this.picture});
+  const Planet ({this.id, this.name, this.nickname, this.distance, this.orbit, this.gravity, this.temperature, this.surface, this.volume, this.naturalSatellites, this.description, this.image, this.picture});
   
 }
 
@@ -22,6 +25,9 @@ List<Planet> planets = [
     distance: '150m Km',
     orbit: '365 dias ou 1 ano',
     gravity: '9.807 m/s²',
+    temperature: '14ºC',
+    surface: '510 072 000 Km²',
+    volume: '	1,08321×10¹² km³',
     naturalSatellites: '1 (Lua)',
     description: "    A Terra é o terceiro planeta mais próximo do Sol, o mais denso e o quinto maior dos oito planetas do Sistema Solar. É também o maior dos quatro planetas telúricos.",
     image: 'assets/img/earth.png',
@@ -33,7 +39,7 @@ List<Planet> planets = [
     nickname: 'Planeta água',
     distance: '150m Km',
     orbit: '365 dias ou 1 ano',
-    gravity: '9.807 m/s',
+    gravity: '9.807 m/s²',
     naturalSatellites: '1 (Lua)',
     description: "    A Terra é o terceiro planeta mais próximo do Sol, o mais denso e o quinto maior dos oito planetas do Sistema Solar. É também o maior dos quatro planetas telúricos.",
     image: 'assets/img/earth.png',

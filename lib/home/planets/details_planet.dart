@@ -57,6 +57,18 @@ class DetailsPlanet extends StatelessWidget {
               new Row(
                 children: <Widget>[
                   new Text(
+                    'Distância do Sol:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.distance,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
                     'Órbita:  ',
                     style: subHeaderTextStyle,
                   ),
@@ -81,11 +93,35 @@ class DetailsPlanet extends StatelessWidget {
               new Row(
                 children: <Widget>[
                   new Text(
-                    'Distância do Sol:  ',
+                    'Temperatura média:  ',
                     style: subHeaderTextStyle,
                   ),
                   new Text(
-                    planet.distance,
+                    planet.temperature,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Área da Superficie:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.surface,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Volúme:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.volume,
                     style: commonTextStyle,
                   )
                 ],

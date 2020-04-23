@@ -69,6 +69,18 @@ class DetailsPlanet extends StatelessWidget {
               new Row(
                 children: <Widget>[
                   new Text(
+                    'Tipo de Planeta:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.type,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
                     'Órbita:  ',
                     style: subHeaderTextStyle,
                   ),
@@ -148,7 +160,51 @@ class DetailsPlanet extends StatelessWidget {
                 planet.description,
                 style: commonTextStyle,
                 textAlign: TextAlign.justify,
-              )
+              ),
+              new Separator(),
+              new Text(
+                'Nomeclatura',
+                style: titleTextStyle,
+              ),
+              new Container(height: 4.0),
+              new Text(
+                planet.nomenclature,
+                style: commonTextStyle,
+                textAlign: TextAlign.justify,
+              ),
+              new Separator(),
+              new Text(
+                'Estrutura e Composição',
+                style: titleTextStyle,
+              ),
+              new Container(height: 4.0),
+              new Text(
+                planet.structure,
+                style: commonTextStyle,
+                textAlign: TextAlign.justify,
+              ),
+              new Separator(),
+              new Text(
+                'Estudo e Observação',
+                style: titleTextStyle,
+              ),
+              new Container(height: 4.0),
+              new Text(
+                planet.study,
+                style: commonTextStyle,
+                textAlign: TextAlign.justify,
+              ),
+              new Separator(),
+              new Text(
+                'Curiosidades',
+                style: titleTextStyle,
+              ),
+              new Container(height: 4.0),
+              new Text(
+                planet.curiosities,
+                style: commonTextStyle,
+                textAlign: TextAlign.justify,
+              ),
             ],
           ),
         ),

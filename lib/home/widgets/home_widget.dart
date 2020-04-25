@@ -19,7 +19,7 @@ class HomeWidget extends StatelessWidget {
           new HorizontalListPlanets(),
           new SubTitle('Planetas Anões'),
           new HorizontalListDwarfPlanets(),
-          new SubTitle('Cometas'),
+          new SubTitle('Satélites Naturais'),
           new Container(height: 200.0)
         ],
       ),

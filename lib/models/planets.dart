@@ -63,26 +63,6 @@ List<Planet> planets = [
     image: 'assets/img/earth.png',
     picture: 'assets/pictures/earth.jpg',
   ),
-  const Planet(
-    id: '4',
-    name: 'Terra',
-    nickname: 'Planeta água',
-    distance: '150m Km',
-    type: 'Rochoso',
-    orbit: '365 dias ou 1 ano',
-    gravity: '9.807 m/s²',
-    temperature: '14ºC',
-    surface: '510 072 000 Km²',
-    volume: '	1,08321×10¹² km³',
-    naturalSatellites: '1 (Lua)',
-    description: "    A Terra é o terceiro planeta mais próximo do Sol, o mais denso e o quinto maior dos oito planetas do Sistema Solar. É também o maior dos quatro planetas telúricos.",
-    nomenclature: '   O nome Terra não tem origem no nome de um Deus grego ou romano, como é o caso dos restantes planetas. A palavra deriva do latim terra, que significa solo, região, país.',
-    structure: '    O interior da Terra, assim como o de outros planetas telúricos, é dividido em camadas definidas com base nas suas propriedades químicas e físicas (reológicas), mas ao contrário dos outros planetas telúricos tem um núcleo interno e um núcleo externo distintos. ',
-    study: '    biosfera bla bla bla',
-    curiosities: '    A terra não é plana.',
-    image: 'assets/img/earth.png',
-    picture: 'assets/pictures/earth.jpg',
-  ),
 ];
 
 

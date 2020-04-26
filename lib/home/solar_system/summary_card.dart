@@ -58,7 +58,7 @@ class SummaryCard extends StatelessWidget {
     
     final summaryCard = new Container(
       child: summaryCardContent,
-      height: 350.0,
+      height: 300.0,
       margin: new EdgeInsets.only(top: 46.0),
       decoration: new BoxDecoration(
         color: new Color(0xFF333366),

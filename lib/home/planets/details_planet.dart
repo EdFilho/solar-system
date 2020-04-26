@@ -10,7 +10,7 @@ class DetailsPlanet extends StatelessWidget {
 
   DetailsPlanet(this.planet);
 
-  Container _getBackground () {
+  Container _getBackground() {
     return new Container(
       child: new Image.asset(
         planet.picture,
@@ -196,15 +196,27 @@ class DetailsPlanet extends StatelessWidget {
               ),
               new Separator(),
               new Text(
-                'Curiosidades',
+                'Atmosfera',
                 style: titleTextStyle,
               ),
               new Container(height: 4.0),
+              new Text(
+                planet.atmosphere,
+                style: commonTextStyle,
+                textAlign: TextAlign.justify,
+              ),
+              new Separator(),
+              new Text(
+                'Curiosidades',
+                style: titleTextStyle,
+              ),
+              
               new Text(
                 planet.curiosities,
                 style: commonTextStyle,
                 textAlign: TextAlign.justify,
               ),
+              new Container(height: 10.0),
             ],
           ),
         ),

@@ -14,11 +14,12 @@ class Planet {
   final String nomenclature;
   final String structure;
   final String study;
+  final String atmosphere;
   final String curiosities;
   final String image;
   final String picture;
 
-  const Planet ({this.id, this.name, this.nickname, this.distance, this.type, this.orbit, this.gravity, this.temperature, this.surface, this.volume, this.naturalSatellites, this.description, this.nomenclature, this.structure, this.study, this.curiosities, this.image, this.picture});
+  const Planet ({this.id, this.name, this.nickname, this.distance, this.type, this.orbit, this.gravity, this.temperature, this.surface, this.volume, this.naturalSatellites, this.description, this.nomenclature, this.structure, this.study, this.atmosphere, this.curiosities, this.image, this.picture});
   
 }
 
@@ -39,6 +40,7 @@ List<Planet> planets = [
     nomenclature: "   Os romanos batizaram o planeta com o nome do seu deus mensageiro com asas nos pés, Mercúrio (em latim, Mercurius), equivalente ao grego Hermes, em virtude de o astro cruzar o firmamento mais rápido que qualquer outro planeta.",
     structure: "    Mercúrio é um dos quatro planetas telúricos do Sistema Solar e seu corpo é rochoso como a Terra. É o menor planeta do sistema solar, com um raio equatorial de 2 439,7 km. Mercúrio é menor até que os dois maiores satélites naturais do sistema solar, as luas Ganimede e Titã, embora seja mais massivo.",
     study: "    As primeiras observações telescópicas de Mercúrio foram feitas por Galileu no início do século XVII, e embora ele tenha visto fases em Vênus, seu telescópio não era potente o suficiente para visualizar as fases mercurianas.",
+    atmosphere: '   Em vez de uma atmosfera, Mercúrio possui uma fina exosfera composta de átomos arrancados da superfície pelo vento solar e atingindo meteoróides. A exosfera de Mercúrio é composta principalmente de oxigênio, sódio, hidrogênio, hélio e potássio.',
     curiosities: "    Apesar do seu pequeno tamanho e lenta velocidade de rotação em 59 dias, Mercúrio tem um campo magnético significativo e aparentemente global.",
     image: 'assets/img/mercury.png',
     picture: 'assets/pictures/mercury.jpg',
@@ -59,6 +61,7 @@ List<Planet> planets = [
     nomenclature: '   O nome Terra não tem origem no nome de um Deus grego ou romano, como é o caso dos restantes planetas. A palavra deriva do latim terra, que significa solo, região, país.',
     structure: '    O interior da Terra, assim como o de outros planetas telúricos, é dividido em camadas definidas com base nas suas propriedades químicas e físicas (reológicas), mas ao contrário dos outros planetas telúricos tem um núcleo interno e um núcleo externo distintos. ',
     study: '    biosfera bla bla bla',
+    atmosphere: 'bla bla bla',
     curiosities: '    A terra não é plana.',
     image: 'assets/img/earth.png',
     picture: 'assets/pictures/earth.jpg',

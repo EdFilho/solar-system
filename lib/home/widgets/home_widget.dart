@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solar_system/componentes/subtitle.dart';
 import 'package:solar_system/home/dwarf_planets/horizontal_list_dwarf_planets.dart';
+import 'package:solar_system/home/moons/horizontal_list_moons.dart';
 import 'package:solar_system/home/planets/horizontal_list_planets.dart';
 import 'package:solar_system/home/solar_system/summary_card.dart';
 
@@ -20,7 +21,8 @@ class HomeWidget extends StatelessWidget {
           new SubTitle('Planetas Anões'),
           new HorizontalListDwarfPlanets(),
           new SubTitle('Satélites Naturais'),
-          new Container(height: 200.0)
+          new HorizontalListMoons(),
+          new Container(height: 200.0),
         ],
       ),
     );

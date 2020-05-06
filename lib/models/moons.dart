@@ -10,8 +10,10 @@ class Moon {
   final String discovered;
   final String structure;
   final String formation;
+  final String image;
+  final String picture;
 
-  const Moon ({ this.id, this.name, this.planet, this.size, this.volume, this.density, this.description, this.nomeclature, this.discovered, this.structure, this.formation });
+  const Moon ({ this.id, this.name, this.planet, this.size, this.volume, this.density, this.description, this.nomeclature, this.discovered, this.structure, this.formation, this.image, this.picture });
 
 }
 
@@ -28,5 +30,7 @@ List <Moon> moons = [
     discovered: 'bla bla',
     structure: 'bla bla',
     formation: 'bla bla',
+    image: 'assets/img/moon.png',
+    picture: 'assets/pictures/moon.png',
   ),
 ];

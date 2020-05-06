@@ -20,6 +20,8 @@ class _HomePageState extends State<HomePage> {
 
   int _selectedIndex = 0;
 
+  final List<String> titles = ['Sistema Solar', 'Galeria'];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -40,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        flexibleSpace: new GradientAppBar('Sistema Solar'),
+        flexibleSpace: new GradientAppBar(titles[_selectedIndex]),
       ),
       body: new Center(
         child: widgets.elementAt(_selectedIndex),

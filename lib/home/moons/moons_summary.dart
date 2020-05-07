@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solar_system/componentes/separator.dart';
+import 'package:solar_system/home/moons/details_moon.dart';
 import 'package:solar_system/themes/themes_app.dart';
 import 'package:solar_system/models/moons.dart';
 
@@ -41,7 +42,7 @@ class MoonSummary extends StatelessWidget {
     }
 
     final moonCardContent = new Container(
-      margin: new EdgeInsets.fromLTRB(16.0, 38.0, 16.0, 8.0),
+      margin: new EdgeInsets.fromLTRB(16.0, 48.0, 16.0, 8.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,18 +54,33 @@ class MoonSummary extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           new Container(height: 4.0),
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Icon(
+                Icons.location_on,
+                color: Color(0xffb6b2df),
+                size: 16.0,
+              ),
+              new Container(width: 3.0),
+              new Text(
+                moon.planet,
+                style: subTitleTextStyle,
+              )
+            ],
+          ),
           new Separator(),
           new Row(
             children: <Widget>[
               new Expanded(
                 child: _moonValue(
-                  value: moon.planet,
+                  value: moon.distance,
                   image: 'assets/img/ic_distance.png'
                 ),
               ),
               new Expanded(
                 child: _moonValue(
-                  value: moon.size,
+                  value: moon.gravity,
                   image: 'assets/img/ic_gravity.png'
                 ),
               ),
@@ -93,7 +109,13 @@ class MoonSummary extends StatelessWidget {
     );
 
     return new GestureDetector(
-      onTap: null,
+      onTap: () => Navigator.of(context).push(
+        new PageRouteBuilder(
+          pageBuilder: (_,__,___) => new DetailsMoons(moon),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+            new FadeTransition(opacity: animation, child: child),
+        ),
+      ),
       child: new Container(
         margin: EdgeInsets.symmetric(
           vertical: 18.0,
@@ -101,8 +123,8 @@ class MoonSummary extends StatelessWidget {
         ),
         child: Stack(
           children: <Widget>[
-            moonThumbnail,
             moonCard,
+            moonThumbnail,
           ],
         ),
       ),

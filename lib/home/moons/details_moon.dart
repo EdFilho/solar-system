@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solar_system/home/moons/moons_summary.dart';
 import 'package:solar_system/models/moons.dart';
+import 'package:solar_system/themes/themes_app.dart';
 
 class DetailsMoons extends StatelessWidget {
 
@@ -48,8 +49,70 @@ class DetailsMoons extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new Text(
-                ''
-              )
+                'Caracteristicas',
+                style: titleTextStyle,
+              ),
+              new Container(height: 4.0),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Distância do Planeta:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    moon.distance,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'gravidade:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    moon.gravity,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Tamanho:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    moon.size,
+                    style: commonTextStyle,
+                  ),
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Volume:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    moon.volume,
+                    style: commonTextStyle,
+                  ),
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
+                    'Densidade:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    moon.density,
+                    style: commonTextStyle,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -57,10 +120,33 @@ class DetailsMoons extends StatelessWidget {
     );
   }
 
+  Container _getToolbar(BuildContext context) {
+    return new Container(
+      margin: new EdgeInsets.only(
+        top: MediaQuery
+            .of(context)
+            .padding
+            .top
+      ),
+      child: new BackButton(color: Colors.white),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return new Scaffold(
+      body: new Container(
+        constraints: BoxConstraints.expand(),
+        color: new Color(0xFF736AB7),
+        child: new Stack(
+          children: <Widget>[
+            _getBackgrond(),
+            _getGradient(),
+            _getContent(),
+            _getToolbar(context),
+          ],
+        ),
+      ),
     );
   }
 }

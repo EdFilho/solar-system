@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gradient_bottom_navigation_bar/gradient_bottom_navigation_bar.dart';
 import 'package:solar_system/componentes/gradient_app_bar.dart';
-import 'package:solar_system/home/widgets/home_widget.dart';
+import 'package:solar_system/home/home_widget.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -19,6 +19,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   int _selectedIndex = 0;
+
+  final List<String> titles = ['Sistema Solar', 'Galeria'];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -40,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        flexibleSpace: new GradientAppBar('Sistema Solar'),
+        flexibleSpace: new GradientAppBar(titles[_selectedIndex]),
       ),
       body: new Center(
         child: widgets.elementAt(_selectedIndex),

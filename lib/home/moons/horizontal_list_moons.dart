@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:solar_system/home/planets/planet_summary.dart';
-import 'package:solar_system/models/planets.dart';
+import 'package:solar_system/home/moons/moons_summary.dart';
+import 'package:solar_system/models/moons.dart';
 
-class HorizontalListPlanets extends StatelessWidget {
+class HorizontalListMoons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      height: 280,
-      width: 400,
+      height: 280.0,
+      width: 400.0,
       color: new Color(0xFF736AB7),
       child: new CustomScrollView(
         scrollDirection: Axis.horizontal,
@@ -17,8 +17,8 @@ class HorizontalListPlanets extends StatelessWidget {
             sliver: new SliverFixedExtentList(
               itemExtent: 300.0,
               delegate: new SliverChildBuilderDelegate(
-                (context, index) => new PlanetSummary(planets[index]),
-                childCount: planets.length,
+                (context, index) => new MoonSummary(moons[index]),
+                childCount: moons.length,
               ),
             ),
           )

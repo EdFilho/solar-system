@@ -108,16 +108,6 @@ List<Planet> planets = [
     surface: '510.064.472 Km²',
     volume: '1.083.206.916.846 km³',
     naturalSatellites: '1 (Lua)',
-<<<<<<< HEAD
-    description: "    Nosso planeta natal é o terceiro planeta do Sistema Solar, e o único lugar que conhecemos até agora é habitado por seres vivos. Enquanto a Terra é apenas o quinto maior planeta do sistema solar, é o único mundo em nosso sistema solar com água líquida na superfície. Apenas um pouco maior que a vizinha Vênus, a Terra é o maior dos quatro planetas mais próximos do Sol, todos feitos de rocha e metal.",
-    nomenclature: '   O nome Terra não tem origem no nome de um Deus grego ou romano, como é o caso dos restantes planetas. A palavra deriva do latim terra, que significa solo, região, país.',
-    structure: '    O interior da Terra, assim como o de outros planetas telúricos, é dividido em camadas definidas com base nas suas propriedades químicas e físicas (reológicas), mas ao contrário dos outros planetas telúricos tem um núcleo interno e um núcleo externo distintos. ',
-    study: '    biosfera bla bla bla',
-    atmosphere: 'bla bla bla',
-    curiosities: '    A terra não é plana.',
-    eventsData: [],
-    events: [],
-=======
     description: "    Nosso planeta natal é o terceiro planeta do Sol, e o único lugar que conhecemos até agora é habitado por seres vivos. Enquanto a Terra é apenas o quinto maior planeta do sistema solar, é o único mundo em nosso sistema solar com água líquida na superfície. Apenas um pouco maior que o vizinho Vênus, a Terra é o maior dos quatro planetas mais próximos do Sol, todos feitos de rocha e metal.",
     nomenclature: '   O nome Terra tem pelo menos 1.000 anos. Todos os planetas, exceto a Terra, receberam o nome de deuses e deusas gregos e romanos. No entanto, o nome Terra é uma palavra germânica, que significa simplesmente "o solo".',
     structure: '    A Terra é composta por quatro camadas principais, começando com um núcleo interno no centro do planeta, envolvido pelo núcleo externo, manto e crosta.\n\n    O núcleo interno é uma esfera sólida feita de ferro e níquel com cerca de 1.221 quilômetros de raio. Lá, a temperatura chega a 5.400 graus Celsius. Ao redor do núcleo interno está o núcleo externo. Essa camada tem cerca de 2.300 quilômetros de espessura, feita de fluidos de ferro e níquel. Entre o núcleo externo e a crosta está o manto, a camada mais espessa. Essa mistura quente e viscosa de rocha derretida tem cerca de 2.900 quilômetros de espessura e tem a consistência de caramelo. A camada mais externa, a crosta terrestre, percorre em média 30 quilômetros de profundidade em terra. No fundo do oceano, a crosta é mais fina e se estende por cerca de 5 km do fundo do mar até o topo do manto. ',
@@ -126,7 +116,6 @@ List<Planet> planets = [
     curiosities: '    A terra não é plana. É um globo rochoso.',
     eventsData: ['2000'],
     events: ['2000'],
->>>>>>> 9138aa68e98d1892a153dc990bb21ff78c753cb9
     image: 'assets/img/earth.png',
     picture: 'assets/pictures/earth.jpg',
   ),

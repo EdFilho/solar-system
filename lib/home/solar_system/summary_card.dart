@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solar_system/componentes/separator.dart';
+import 'package:solar_system/home/solar_system/summary_details.dart';
 import 'package:solar_system/models/summary.dart';
 import 'package:solar_system/themes/themes_app.dart';
 
@@ -58,7 +59,7 @@ class SummaryCard extends StatelessWidget {
     
     final summaryCard = new Container(
       child: summaryCardContent,
-      height: 350.0,
+      height: 300.0,
       margin: new EdgeInsets.only(top: 46.0),
       decoration: new BoxDecoration(
         color: new Color(0xFF333366),
@@ -74,16 +75,25 @@ class SummaryCard extends StatelessWidget {
       ),
     );
 
-    return new Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 18.0,
-        horizontal: 24.0,
+    return new GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        new PageRouteBuilder(
+          pageBuilder: (_,__,___) => new SummaryDetails(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+            new FadeTransition(opacity: animation, child:child),
+        ),
       ),
-      child: new Stack(
-        children: <Widget>[
-          summaryCard,
-          summaryThumbnail
-        ],
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          vertical: 18.0,
+          horizontal: 24.0,
+        ),
+        child: new Stack(
+          children: <Widget>[
+            summaryCard,
+            summaryThumbnail
+          ],
+        ),
       ),
     );
   }

@@ -10,7 +10,7 @@ class DetailsPlanet extends StatelessWidget {
 
   DetailsPlanet(this.planet);
 
-  Container _getBackground () {
+  Container _getBackground() {
     return new Container(
       child: new Image.asset(
         planet.picture,
@@ -141,6 +141,18 @@ class DetailsPlanet extends StatelessWidget {
               new Row(
                 children: <Widget>[
                   new Text(
+                    'Densidade:  ',
+                    style: subHeaderTextStyle,
+                  ),
+                  new Text(
+                    planet.density,
+                    style: commonTextStyle,
+                  )
+                ],
+              ),
+              new Row(
+                children: <Widget>[
+                  new Text(
                     'Satélites Naturais:  ',
                     style: subHeaderTextStyle,
                   ),
@@ -174,7 +186,7 @@ class DetailsPlanet extends StatelessWidget {
               ),
               new Separator(),
               new Text(
-                'Estrutura e Composição',
+                'Estrutura e Formação',
                 style: titleTextStyle,
               ),
               new Container(height: 4.0),
@@ -196,15 +208,63 @@ class DetailsPlanet extends StatelessWidget {
               ),
               new Separator(),
               new Text(
-                'Curiosidades',
+                'Atmosfera',
                 style: titleTextStyle,
               ),
               new Container(height: 4.0),
+              new Text(
+                planet.atmosphere,
+                style: commonTextStyle,
+                textAlign: TextAlign.justify,
+              ),
+              new Separator(),
+              new Text(
+                'Curiosidades',
+                style: titleTextStyle,
+              ),
+              
               new Text(
                 planet.curiosities,
                 style: commonTextStyle,
                 textAlign: TextAlign.justify,
               ),
+              new Container(height: 10.0),
+              new Separator(),
+              new Text(
+                'Eventos Significativos',
+                style: titleTextStyle,
+              ),
+              new Container(
+                height: 300.0,
+                child: ListView.builder(
+                  itemCount: planet.events.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return new Column(
+                      children: <Widget>[
+                        new Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            new Text(
+                              planet.eventsData[index],
+                              style: subHeaderTextStyle,
+                            ),
+                            new Flexible(
+                              child: Text(
+                                planet.events[index],
+                                style: commonTextStyle,
+                                textAlign: TextAlign.justify,
+                              ),
+                            ),
+                          ],
+                        ),
+                        new Container(height: 8.0)
+                      ],
+                    );
+                  },
+                ),
+              ),
+
+              new Container(height: 10.0),
             ],
           ),
         ),

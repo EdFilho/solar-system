@@ -24,7 +24,6 @@ class HorizontalListPlanets extends StatelessWidget {
             )
           ],
         ),
-      
     );
   }
 }

@@ -10,7 +10,7 @@ class DetailsDwarfPlanet extends StatelessWidget {
 
   DetailsDwarfPlanet(this.dwarfPlanet);
 
-  Container _getBackground () {
+  Container _getBackground() {
     return new Container(
       child: new Image.asset(
         dwarfPlanet.picture,

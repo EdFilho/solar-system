@@ -8,7 +8,7 @@ void main() {
       title: 'Sitema Solar',
       theme: appTheme(),
       home: Splash(),
-      debugShowCheckedModeBanner: false
+      debugShowCheckedModeBanner: false,
     )
   );
 }

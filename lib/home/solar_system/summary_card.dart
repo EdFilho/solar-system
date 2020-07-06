@@ -86,7 +86,7 @@ class SummaryCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(
           vertical: 18.0,
-          horizontal: 24.0,
+          horizontal: 20.0,
         ),
         child: new Stack(
           children: <Widget>[

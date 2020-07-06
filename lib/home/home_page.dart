@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:gradient_bottom_navigation_bar/gradient_bottom_navigation_bar.dart';
 import 'package:solar_system/componentes/gradient_app_bar.dart';
 import 'package:solar_system/home/home_widget.dart';
+import 'package:solar_system/home/widgets/gallery_widget.dart';
+import 'package:solar_system/themes/themes_app.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -32,15 +34,15 @@ class _HomePageState extends State<HomePage> {
     HomeWidget(
       key: PageStorageKey('Widget Home'),
     ),
-    Text('Gallery'),
-     // GalleryWidget(
-    //   key: PageStorageKey("Widget 1")
-    // ),
+     GalleryWidget(
+      key: PageStorageKey("Widget Gallery")
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: accentColor,
       appBar: AppBar(
         flexibleSpace: new GradientAppBar(titles[_selectedIndex]),
       ),

@@ -12,10 +12,11 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          new SummaryCard(),
+          SummaryCard(),
           new SubTitle('Planetas'),
           new HorizontalListPlanets(),
           new SubTitle('Planetas Anões'),

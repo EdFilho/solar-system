@@ -91,7 +91,7 @@ ThemeData appTheme() {
     ),
     primaryColor: primaryColor,
     accentColor: accentColor,
-    scaffoldBackgroundColor: Color(0xFF736AB7),
+    scaffoldBackgroundColor: Colors.white,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
 
